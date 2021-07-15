@@ -7,7 +7,6 @@ from itertools import cycle
 import os
 import json
 import random
-import keep_alive
 
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix='.', intents = intents)
@@ -159,5 +158,4 @@ async def leaderboard(ctx, x=5):
   await ctx.send(embed = em)
 
 
-keep_alive.keep_alive()
 client.run(os.getenv('token'))
